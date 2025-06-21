@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- 🔄 Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="default.mp4" type="video/mp4" />
+  </video>
+
+  <!-- 🌗 Theme Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="mode-toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- ⛅ Weather Card -->
+  <div class="card">
+    <div class="search">
+      <input type="text" id="input" placeholder="Enter city name.." spellcheck="false" />
+      <button id="search"><img src="serc.png" alt="Search" /></button>
+    </div>
+
+    <div class="weather">
+      <!-- Weather Icon from OpenWeather -->
+      <img src="https://openweathermap.org/img/wn/01d@4x.png" class="weather-icon" alt="Weather Icon" />
+      <h1 class="temp">22°C</h1>
+      <h2 class="city">New York</h2>
+      <div class="details">
+        <div class="col">
+          <img src="humidity.png" alt="Humidity Icon" />
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="wind.png" alt="Wind Speed Icon" />
+          <div>
+            <p class="wind">15 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⏳ Loader -->
+  <div id="loader" class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <!-- 📜 Weather Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
